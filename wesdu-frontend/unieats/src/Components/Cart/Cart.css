@@ -1,0 +1,20 @@
+
+html,
+body {
+    background-color: #110d22;
+    color: #fefefe;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+}

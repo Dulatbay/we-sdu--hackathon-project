@@ -1,0 +1,10 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

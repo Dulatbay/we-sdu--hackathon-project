@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: wesdu-postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: k_app
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: wesdu_db
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  keycloak:
+    image: jboss/keycloak
+    container_name: wesdu-keycloak
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: wesdu_db
+      DB_USER: k_app
+      DB_PASSWORD: 123
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin_password
+    ports:
+      - "8484:8080"
+    depends_on:
+      - postgres
+    links:
+      - "postgres:postgres"

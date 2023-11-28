@@ -1,0 +1,7 @@
+.product-cards{
+    display: flex;
+}
+
+.product-card{
+    margin: 6px;
+}

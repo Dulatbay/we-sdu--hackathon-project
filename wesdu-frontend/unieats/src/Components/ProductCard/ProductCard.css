@@ -1,0 +1,23 @@
+.location{
+    color: #979C9E
+}
+
+.title{
+    font-size: 2px;
+    text-align: center;
+}
+
+.location{
+    text-align: center;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+
+.row-decision{
+    display: flex;
+    justify-content: center;
+}
